@@ -1,0 +1,27 @@
+import random
+l1=["stone","paper","scissor"]
+mark_user=0
+mark_com=0
+rounds=int(input("Enter the no.of rounds: "))
+i=1
+while(i<=rounds):
+    print(l1)
+    user_ch=input("Enter the choice : ")
+    com=random.choice(l1)
+    print("Computer choice : ",com)
+    if((user_ch=="stone" and com=="paper") or (user_ch=="stone" and com=="scissor") or (user_ch=="paper" and com=="scissor")):
+        mark_user+=1
+        print("user=",mark_user)
+    if((user_ch=="paper" and com=="stone") or (user_ch=="scissor" and com=="sctone") or (user_ch=="scissor" and com=="paper")):
+        mark_com+=1
+        print("computer=",mark_com)
+    i=i+1
+print("\nuser total mark",mark_user)
+print("\ncomputer total mark",mark_com)
+if(mark_user>mark_com):
+    print("\nuser win")
+elif(mark_user<mark_com):
+    print("\ncomputer win")
+else:
+    print("\ntie")
+
